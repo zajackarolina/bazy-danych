@@ -1,0 +1,30 @@
+id_produktu-> nazwa_produktu, VAT, cena_produktu
+id_klienta, data_zamowienia -> nazwa_klienta, suma_brutto, suma_netto
+nazwa_klienta, nazwa_produktu -> id_produktu, id_klienta
+id_produktu, id_klienta, data_zamowienia -> ilość
+nazwa_produktu -> VAT
+id_produktu -> cena_produktu
+
+
+zad.2
+-id_produktu
+_id_klienta
+-nazwa_klienta
+-data_zamowienia, id_klienta, id_produktu
+-nazwa_produktu, nazwa_klienta,id_produktu
+-data_zamowienia, nazwa_klienta, nazwa_produktu -> razem mogą być unikalne
+
+zad.3
+
+id_pomieszczenia -> numer_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy
+id_budynku -> ulica, miasto, kod_pocztowy
+
+Kandydujące:
+id_pomieszczenia:
+Jest to klucz główny tabeli, unikalnie identyfikujący każde pomieszczenie.
+
+id_budynku:
+Klucz kandydujący, który może być wykorzystywany do grupowania pomieszczeń według budynków.
+
+(ulica, miasto, kod_pocztowy):
+Kombinacja danych adresowych, która może identyfikować unikalne budynki.
